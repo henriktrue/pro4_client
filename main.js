@@ -26,7 +26,7 @@ socket.on('m1_l', function(){
 		var m1 = duty1++;
 		var m1 = duty1*10000;
 		console.log(m1);
-		fs.writeFileSync("/sys/devices/ocp.3/bs_pwm_test_P9_42.17/duty, m1);
+		fs.writeFileSync("/sys/devices/ocp.3/bs_pwm_test_P9_42.17/duty", m1);
 
 	}
 });
