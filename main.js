@@ -1,49 +1,87 @@
-const fs = require('fs');
 var socket = require('socket.io-client')('http://localhost:4000/');
 
-var duty1 = 100;
+var duty1 = 150;
+var duty2 = 150;
+var duty3 = 150;
+var duty4 = 150;
+var duty5 = 150;
 
 socket.on('m1_l', function(){
-    console.log("a");
-    var y = duty1++;
-    console.log(duty1);
-	
+	if (duty1 < 220) {
+		var l1 = duty1++;
+		var l1 = duty1++;
+		console.log(duty1 * 10000);
+	}
 });
 
 socket.on('m1_r', function(){
-    console.log("d");
-    var y = duty1--;
-    console.log(duty1);
+	if (duty1 > 52) {
+		var r1 = duty1--;
+		var r1 = duty1--;
+		console.log(duty1 * 10000);
+	}
 });
 
 socket.on('m2_l', function(){
-    console.log("w");
+	if (duty2 < 220) {
+		var l2 = duty2++;
+		var l2 = duty2++;
+		console.log(duty2 * 10000);
+	}
 });
 
 socket.on('m2_r', function(){
-    console.log("s");
+	if (duty2 > 52) {
+		var r2 = duty2--;
+		var r2 = duty2--;
+		console.log(duty2 * 10000);
+	}
 });
 
 socket.on('m3_l', function(){
-    console.log("4");
+	if (duty3 < 220) {
+		var l3 = duty3++;
+		var l3 = duty3++;
+		console.log(duty3 * 10000);
+	}
 });
 
 socket.on('m3_r', function(){
-    console.log("6");
+	if (duty3 > 52) {
+		var r3 = duty3--;
+		var r3 = duty3--;
+		console.log(duty3 * 10000);
+	}
 });
 
 socket.on('m4_l', function(){
-    console.log("5");
+	if (duty4 < 220) {
+		var l4 = duty4++;
+		var l4 = duty4++;
+		console.log(duty4 * 10000);
+	}
 });
 
 socket.on('m4_r', function(){
-    console.log("8");
+	if (duty4 > 52) {
+		var r4 = duty4--;
+		var r4 = duty4--;
+		console.log(duty4 * 10000);
+	}
 });
 
 socket.on('m5_l', function(){
-    console.log("n");
+	if (duty5 < 220) {
+		var l5 = duty5++;
+		var l5 = duty5++;
+		console.log(duty5 * 10000);
+	}
 });
 
 socket.on('m5_r', function(){
-    console.log("m");
+	if (duty5 > 52) {
+		var r5 = duty5--;
+		var r5 = duty5--;
+		console.log(duty5 * 10000);
+	}
 });
