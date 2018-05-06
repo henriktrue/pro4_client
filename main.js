@@ -24,9 +24,9 @@ var duty5 = 150;
 //fs.writeFileSync("/sys/class/pwm/pwm-1:0/polarity", "0"); 	
 
 //P9.14
-fs.writeFileSync("/sys/class/pwm/pwmchip3/export", "0"); 	
-fs.writeFileSync("/sys/class/pwm/pwm-3:0/period", "20000000"); 	
-fs.writeFileSync("/sys/class/pwm/pwm-3:0/polarity", "0"); 	
+//fs.writeFileSync("/sys/class/pwm/pwmchip3/export", "0"); 	
+//fs.writeFileSync("/sys/class/pwm/pwm-3:0/period", "20000000"); 	
+//fs.writeFileSync("/sys/class/pwm/pwm-3:0/polarity", "0"); 	
 
 //P8.19
 //fs.writeFileSync("/sys/class/pwm/pwmchip5/export", "0"); 	
@@ -90,7 +90,7 @@ socket.on('m3_l', function(){
 		var m3 = duty3++;
 		var m3 = duty3*10000;
 		console.log(m3);
-		fs.writeFileSync("/sys/class/pwm/pwm-3:0/duty_cycle", m3);
+		//fs.writeFileSync("/sys/class/pwm/pwm-3:0/duty_cycle", m3);
 	}
 });
 
@@ -102,7 +102,7 @@ socket.on('m3_r', function(){
 		var m3 = duty3*10000;
 		console.log(m3);
 		console.log(m3);
-		fs.writeFileSync("/sys/class/pwm/pwm-3:0/duty_cycle", m3);
+		//fs.writeFileSync("/sys/class/pwm/pwm-3:0/duty_cycle", m3);
 	}
 });
 
