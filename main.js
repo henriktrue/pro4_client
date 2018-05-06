@@ -14,8 +14,8 @@ var duty5 = 150;
 //fs.writeFileSync("config-pin P8.13 pwm");
 
 //P9.22
-//fs.writeFileSync("/sys/class/pwm/pwmchip0/export", "0"); 
-//fs.writeFileSync("/sys/class/pwm/pwm-0:0/period", "20000000"); 	
+fs.writeFileSync("/sys/class/pwm/pwmchip0/export", "0"); 
+fs.writeFileSync("/sys/class/pwm/pwm-0:0/period", "20000000"); 	
 //fs.writeFileSync("/sys/class/pwm/pwm-0:0/polarity", "0"); 	
 
 //P9.21
@@ -46,7 +46,7 @@ socket.on('m1_l', function(){
 		var m1 = duty1++;
 		var m1 = duty1*10000;
 		console.log(m1);
-		//fs.writeFileSync("/sys/class/pwm/pwm-0:0/duty_cycle", m1);
+		fs.writeFileSync("/sys/class/pwm/pwm-0:0/duty_cycle", m1);
 	}
 });
 
@@ -57,7 +57,7 @@ socket.on('m1_r', function(){
 		var m1 = duty1--;
 		var m1 = duty1*10000;
 		console.log(m1);
-		//fs.writeFileSync("/sys/class/pwm/pwm-0:0/duty_cycle", m1);
+		fs.writeFileSync("/sys/class/pwm/pwm-0:0/duty_cycle", m1);
 	}
 });
 
