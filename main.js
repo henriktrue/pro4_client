@@ -18,7 +18,7 @@ fs.writeFileSync("/sys/class/pwm/pwm-0:0/enable", "1");
 //fs.writeFileSync("/sys/class/pwm/pwm-1:0/enable", "1"); 	
 
 //P9.14
-//fs.writeFileSync("/sys/class/pwm/pwmchip3/export", "0"); 	
+fs.writeFileSync("/sys/class/pwm/pwmchip3/export", "0"); 	
 fs.writeFileSync("/sys/class/pwm/pwm-3:0/period", "20000000"); 	
 fs.writeFileSync("/sys/class/pwm/pwm-3:0/enable", "1"); 
 
