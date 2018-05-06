@@ -90,7 +90,7 @@ socket.on('m3_l', function(){
 		var m3 = duty3++;
 		var m3 = duty3*10000;
 		console.log(m3);
-		//fs.writeFileSync("/sys/class/pwm/pwm-3:0/duty_cycle", m3);
+		fs.writeFileSync("/sys/class/pwm/pwm-3:0/duty_cycle", m3);
 	}
 });
 
@@ -102,7 +102,7 @@ socket.on('m3_r', function(){
 		var m3 = duty3*10000;
 		console.log(m3);
 		console.log(m3);
-		//fs.writeFileSync("/sys/class/pwm/pwm-3:0/duty_cycle", m3);
+		fs.writeFileSync("/sys/class/pwm/pwm-3:0/duty_cycle", m3);
 	}
 });
 
