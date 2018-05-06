@@ -1,6 +1,5 @@
-var socket = require('socket.io-client')('https://pro4team2.herokuapp.com/');
-
 const fs = require('fs');
+var socket = require('socket.io-client')('https://pro4team2.herokuapp.com/');
 
 var duty1 = 150;
 var duty2 = 150;
