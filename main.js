@@ -30,7 +30,7 @@ fs.writeFileSync("/sys/class/pwm/pwm-3:0/enable", "1");
 //P8.13
 //fs.writeFileSync("/sys/class/pwm/pwmchip6/export", "1"); 	
 fs.writeFileSync("/sys/class/pwm/pwm-6:1/period", "20000000"); 	
-fs.writeFileSync("/sys/class/pwm/pwm-6:0/enable", "1");  	
+fs.writeFileSync("/sys/class/pwm/pwm-6:1/enable", "1");  	
 
 
 //motor1 left
