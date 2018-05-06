@@ -9,13 +9,13 @@ var duty5 = 150;
 
 //P9.22
 //fs.writeFileSync("/sys/class/pwm/pwmchip0/export", "0"); 
-fs.writeFileSync("/sys/class/pwm/pwm-0:0/period", "20000000"); 	
-fs.writeFileSync("/sys/class/pwm/pwm-0:0/enable", "1"); 	
+//fs.writeFileSync("/sys/class/pwm/pwm-0:0/period", "20000000"); 	
+//fs.writeFileSync("/sys/class/pwm/pwm-0:0/enable", "1"); 	
 
-//P9.21
+//P9.16
 //fs.writeFileSync("/sys/class/pwm/pwmchip1/export", "0"); 	
-//fs.writeFileSync("/sys/class/pwm/pwm-1:0/period", "20000000"); 
-//fs.writeFileSync("/sys/class/pwm/pwm-1:0/enable", "1"); 	
+fs.writeFileSync("/sys/class/pwm/pwm-3:1/period", "20000000"); 
+fs.writeFileSync("/sys/class/pwm/pwm-3:1/enable", "1"); 	
 
 //P9.14
 //fs.writeFileSync("/sys/class/pwm/pwmchip3/export", "0"); 	
@@ -40,7 +40,7 @@ socket.on('m1_l', function(){
 		var m1 = duty1++;
 		var m1 = duty1*10000;
 		console.log(m1);
-		fs.writeFileSync("/sys/class/pwm/pwm-0:0/duty_cycle", m1);
+		//fs.writeFileSync("/sys/class/pwm/pwm-0:0/duty_cycle", m1);
 	}
 });
 
@@ -51,33 +51,33 @@ socket.on('m1_r', function(){
 		var m1 = duty1--;
 		var m1 = duty1*10000;
 		console.log(m1);
-		fs.writeFileSync("/sys/class/pwm/pwm-0:0/duty_cycle", m1);
+		//fs.writeFileSync("/sys/class/pwm/pwm-0:0/duty_cycle", m1);
 	}
 });
 
-//motor2 left
+//motor P9.16 left
 socket.on('m2_l', function(){
 	if (duty2 < 220) {
 		var m2 = duty2++;
 		var m2 = duty2++;
 		var m2 = duty2*10000;
 		console.log(m2);
-		//fs.writeFileSync("/sys/class/pwm/pwm-1:0/duty_cycle", m2);
+		fs.writeFileSync("/sys/class/pwm/pwm-3:1/duty_cycle", m2);
 	}
 });
 
-//motor2 right
+//motor P9.16 right
 socket.on('m2_r', function(){
 	if (duty2 > 52) {
 		var m2 = duty2--;
 		var m2 = duty2--;
 		var m2 = duty2*10000;
 		console.log(m2);
-		//fs.writeFileSync("/sys/class/pwm/pwm-1:0/duty_cycle", m2);
+		fs.writeFileSync("/sys/class/pwm/pwm-3:1/duty_cycle", m2);
 	}
 });
 
-//motor3 left
+//motor P9.14 left
 socket.on('m3_l', function(){
 	if (duty3 < 220) {
 		var m3 = duty3++;
@@ -88,7 +88,7 @@ socket.on('m3_l', function(){
 	}
 });
 
-//motor3 right
+//motor P9.14 right
 socket.on('m3_r', function(){
 	if (duty3 > 52) {
 		var m3 = duty3--;
@@ -100,7 +100,7 @@ socket.on('m3_r', function(){
 	}
 });
 
-//motor4 left
+//motor P8.19 left
 socket.on('m4_l', function(){
 	if (duty4 < 220) {
 		var m4 = duty4++;
@@ -111,7 +111,7 @@ socket.on('m4_l', function(){
 	}
 });
 
-//motor4 right
+//motor P8.19  right
 socket.on('m4_r', function(){
 	if (duty4 > 52) {
 		var m4 = duty4--;
@@ -122,7 +122,7 @@ socket.on('m4_r', function(){
 	}
 });
 
-//motor5 left
+//motor P8.13 left
 socket.on('m5_l', function(){
 	if (duty5 < 220) {
 		var m5 = duty5++;
@@ -133,7 +133,7 @@ socket.on('m5_l', function(){
 	}
 });
 
-//motor5 right
+//motor P8.13  right
 socket.on('m5_r', function(){
 	if (duty5 > 52) {
 		var m5 = duty5--;
