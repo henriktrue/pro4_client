@@ -9,8 +9,8 @@ var duty5 = 150;
 
 //P9.22
 //fs.writeFileSync("/sys/class/pwm/pwmchip0/export", "0"); 
-fs.writeFileSync("/sys/class/pwm/pwm-0:0/period", "20000000"); 	
-fs.writeFileSync("/sys/class/pwm/pwm-0:0/enable", "1"); 	
+//fs.writeFileSync("/sys/class/pwm/pwm-0:0/period", "20000000"); 	
+//fs.writeFileSync("/sys/class/pwm/pwm-0:0/enable", "1"); 	
 
 //P9.21
 //fs.writeFileSync("/sys/class/pwm/pwmchip1/export", "0"); 	
@@ -18,7 +18,7 @@ fs.writeFileSync("/sys/class/pwm/pwm-0:0/enable", "1");
 //fs.writeFileSync("/sys/class/pwm/pwm-1:0/enable", "1"); 	
 
 //P9.14
-fs.writeFileSync("/sys/class/pwm/pwmchip3/export", "0"); 	
+//fs.writeFileSync("/sys/class/pwm/pwmchip3/export", "0"); 	
 fs.writeFileSync("/sys/class/pwm/pwm-3:0/period", "20000000"); 	
 fs.writeFileSync("/sys/class/pwm/pwm-3:0/enable", "1"); 
 
@@ -28,9 +28,9 @@ fs.writeFileSync("/sys/class/pwm/pwm-3:0/enable", "1");
 //fs.writeFileSync("/sys/class/pwm/pwm-5:0/enable", "1"); 	 	
 
 //P8.13
-//fs.writeFileSync("/sys/class/pwm/pwmchip6/export", "0"); 	
-//fs.writeFileSync("/sys/class/pwm/pwm-6:0/period", "20000000"); 	
-//fs.writeFileSync("/sys/class/pwm/pwm-6:0/enable", "1");  	
+fs.writeFileSync("/sys/class/pwm/pwmchip6/export", "1"); 	
+fs.writeFileSync("/sys/class/pwm/pwm-6:0/period", "20000000"); 	
+fs.writeFileSync("/sys/class/pwm/pwm-6:0/enable", "1");  	
 
 
 //motor1 left
@@ -40,7 +40,7 @@ socket.on('m1_l', function(){
 		var m1 = duty1++;
 		var m1 = duty1*10000;
 		console.log(m1);
-		fs.writeFileSync("/sys/class/pwm/pwm-0:0/duty_cycle", m1);
+		//fs.writeFileSync("/sys/class/pwm/pwm-0:0/duty_cycle", m1);
 	}
 });
 
@@ -51,7 +51,7 @@ socket.on('m1_r', function(){
 		var m1 = duty1--;
 		var m1 = duty1*10000;
 		console.log(m1);
-		fs.writeFileSync("/sys/class/pwm/pwm-0:0/duty_cycle", m1);
+		//fs.writeFileSync("/sys/class/pwm/pwm-0:0/duty_cycle", m1);
 	}
 });
 
@@ -129,7 +129,7 @@ socket.on('m5_l', function(){
 		var m5 = duty5++;
 		var m5 = duty5*10000;
 		console.log(m5);
-		//fs.writeFileSync("/sys/class/pwm/pwm-6:0/duty_cycle", m5);
+		fs.writeFileSync("/sys/class/pwm/pwm-6:0/duty_cycle", m5);
 	}
 });
 
@@ -140,6 +140,6 @@ socket.on('m5_r', function(){
 		var m5 = duty5--;
 		var m5 = duty5*10000;
 		console.log(m5);
-		//fs.writeFileSync("/sys/class/pwm/pwm-6:0/duty_cycle", m5);
+		fs.writeFileSync("/sys/class/pwm/pwm-6:0/duty_cycle", m5);
 	}
 });
