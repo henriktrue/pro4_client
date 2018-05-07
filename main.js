@@ -13,7 +13,7 @@ fs.writeFileSync("/sys/class/pwm/pwm-0:0/period", "20000000");
 fs.writeFileSync("/sys/class/pwm/pwm-0:0/enable", "1"); 	
 
 //P9.16
-//fs.writeFileSync("/sys/class/pwm/pwmchip1/export", "0"); 	
+//fs.writeFileSync("/sys/class/pwm/pwmchip3/export", "1"); 	
 fs.writeFileSync("/sys/class/pwm/pwm-3:1/period", "20000000"); 
 fs.writeFileSync("/sys/class/pwm/pwm-3:1/enable", "1"); 	
 
@@ -23,7 +23,7 @@ fs.writeFileSync("/sys/class/pwm/pwm-3:0/period", "20000000");
 fs.writeFileSync("/sys/class/pwm/pwm-3:0/enable", "1"); 
 
 //P8.19
-//fs.writeFileSync("/sys/class/pwm/pwmchip5/export", "0"); 	
+//fs.writeFileSync("/sys/class/pwm/pwmchip6/export", "0"); 	
 fs.writeFileSync("/sys/class/pwm/pwm-6:0/period", "20000000"); 	
 fs.writeFileSync("/sys/class/pwm/pwm-6:0/enable", "1"); 	 	
 
