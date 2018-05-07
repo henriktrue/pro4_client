@@ -52,9 +52,9 @@ socket.on('m1_r', function(){
 
 //motor P9.14 left
 socket.on('m2_l', function(){
-	if (duty2 < 220) {
-		var m2 = duty2++;
-		var m2 = duty2++;
+	if (duty2 > 74) {
+		var m2 = duty2--;
+		var m2 = duty2--;
 		var m2 = duty2*10000;
 		console.log(m2);
 		fs.writeFileSync("/sys/class/pwm/pwm-3:0/duty_cycle", m2);
@@ -63,9 +63,9 @@ socket.on('m2_l', function(){
 
 //motor P9.14 right
 socket.on('m2_r', function(){
-	if (duty2 > 52) {
-		var m2 = duty2--;
-		var m2 = duty2--;
+	if (duty2 < 170) {
+		var m2 = duty2++;
+		var m2 = duty2++;
 		var m2 = duty2*10000;
 		console.log(m2);
 		fs.writeFileSync("/sys/class/pwm/pwm-3:0/duty_cycle", m2);
