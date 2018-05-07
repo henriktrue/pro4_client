@@ -15,6 +15,8 @@
         echo 1 > /sys/class/pwm/pwmchip6/export
 
 	echo "pwm setup complete"
+	
+	sleep 5
 
 nodejs main
 
