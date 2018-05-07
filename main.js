@@ -77,24 +77,24 @@ socket.on('m2_r', function(){
 	}
 });
 
-//motor P9.42 left
+//motor P9.42 up
 socket.on('m3_l', function(){
-	if (duty3 < 156) {
+	if (duty3 > 52) {
 		var m3 = duty3--;
 		var m3 = duty3--;
 		var m3 = duty3*10000;
+		console.log(m3);
 		console.log(m3);
 		fs.writeFileSync("/sys/class/pwm/pwm-0:0/duty_cycle", m3);
 	}
 });
 
-//motor P9.42 right
+//motor P9.42 down
 socket.on('m3_r', function(){
-	if (duty3 > 52) {
+	if (duty3 < 156) {
 		var m3 = duty3++;
 		var m3 = duty3++;
 		var m3 = duty3*10000;
-		console.log(m3);
 		console.log(m3);
 		fs.writeFileSync("/sys/class/pwm/pwm-0:0/duty_cycle", m3);
 	}
