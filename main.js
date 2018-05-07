@@ -9,7 +9,7 @@ var duty5 = 150;
 
 //P9.42
 //fs.writeFileSync("/sys/class/pwm/pwmchip0/export", "0"); 
-fs.writeFileSync("/sys/class/pwm/pwm-0:0/period", "1520000"); 	
+fs.writeFileSync("/sys/class/pwm/pwm-0:0/period", "20000000"); 	
 fs.writeFileSync("/sys/class/pwm/pwm-0:0/enable", "1"); 	
 
 //P9.16
