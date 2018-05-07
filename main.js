@@ -35,7 +35,7 @@ fs.writeFileSync("/sys/class/pwm/pwm-6:1/enable", "1");
 
 //motor P9.14 left
 socket.on('m1_l', function(){
-	if (duty1 < 220) {
+	if (duty1 < 182) {
 		var m1 = duty1++;
 		var m1 = duty1++;
 		var m1 = duty1*10000;
@@ -46,7 +46,7 @@ socket.on('m1_l', function(){
 
 //motor P9.14 right
 socket.on('m1_r', function(){
-	if (duty1 > 52) {
+	if (duty1 > 58) {
 		var m1 = duty1--;
 		var m1 = duty1--;
 		var m1 = duty1*10000;
