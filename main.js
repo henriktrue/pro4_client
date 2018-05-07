@@ -3,7 +3,7 @@ var socket = require('socket.io-client')('https://pro4team2.herokuapp.com/');
 
 var duty1 = 150;
 var duty2 = 150;
-var duty3 = 15;
+var duty3 = 150;
 var duty4 = 150;
 var duty5 = 150;
 
@@ -79,9 +79,9 @@ socket.on('m2_r', function(){
 
 //motor P9.42 left
 socket.on('m3_l', function(){
-	if (duty3 < 22) {
-		var m3 = duty3++;
-		var m3 = duty3++;
+	if (duty3 < 156) {
+		var m3 = duty3--;
+		var m3 = duty3--;
 		var m3 = duty3*10000;
 		console.log(m3);
 		fs.writeFileSync("/sys/class/pwm/pwm-0:0/duty_cycle", m3);
@@ -90,9 +90,9 @@ socket.on('m3_l', function(){
 
 //motor P9.42 right
 socket.on('m3_r', function(){
-	if (duty3 > 5) {
-		var m3 = duty3--;
-		var m3 = duty3--;
+	if (duty3 > 52) {
+		var m3 = duty3++;
+		var m3 = duty3++;
 		var m3 = duty3*10000;
 		console.log(m3);
 		console.log(m3);
