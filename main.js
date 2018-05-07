@@ -79,7 +79,7 @@ socket.on('m2_r', function(){
 
 //motor P9.42 left
 socket.on('m3_l', function(){
-	if (duty3 < 220) {
+	if (duty3 < 22) {
 		var m3 = duty3++;
 		var m3 = duty3++;
 		var m3 = duty3*10000;
@@ -90,7 +90,7 @@ socket.on('m3_l', function(){
 
 //motor P9.42 right
 socket.on('m3_r', function(){
-	if (duty3 > 52) {
+	if (duty3 > 5) {
 		var m3 = duty3--;
 		var m3 = duty3--;
 		var m3 = duty3*10000;
