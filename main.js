@@ -33,6 +33,8 @@ socket.on('m1_l', function(){
 	if (duty1 < 182) {
 		var m1 = duty1++;
 		var m1 = duty1++;
+		var m1 = duty1++;
+		var m1 = duty1++;		
 		var m1 = duty1*10000;
 		console.log(m1);
 		fs.writeFileSync("/sys/class/pwm/pwm-6:1/duty_cycle", m1);
@@ -42,6 +44,8 @@ socket.on('m1_l', function(){
 //motor P8.13  right
 socket.on('m1_r', function(){
 	if (duty1 > 58) {
+		var m1 = duty1--;
+		var m1 = duty1--;
 		var m1 = duty1--;
 		var m1 = duty1--;
 		var m1 = duty1*10000;
@@ -55,6 +59,8 @@ socket.on('m2_l', function(){
 	if (duty2 > 74) {
 		var m2 = duty2--;
 		var m2 = duty2--;
+		var m2 = duty2--;
+		var m2 = duty2--;
 		var m2 = duty2*10000;
 		console.log(m2);
 		fs.writeFileSync("/sys/class/pwm/pwm-3:0/duty_cycle", m2);
@@ -66,6 +72,8 @@ socket.on('m2_r', function(){
 	if (duty2 < 170) {
 		var m2 = duty2++;
 		var m2 = duty2++;
+		var m2 = duty2++;
+		var m2 = duty2++;
 		var m2 = duty2*10000;
 		console.log(m2);
 		fs.writeFileSync("/sys/class/pwm/pwm-3:0/duty_cycle", m2);
@@ -75,6 +83,8 @@ socket.on('m2_r', function(){
 //motor P9.42 up
 socket.on('m3_l', function(){
 	if (duty3 > 52) {
+		var m3 = duty3--;
+		var m3 = duty3--;
 		var m3 = duty3--;
 		var m3 = duty3--;
 		var m3 = duty3*10000;
@@ -89,6 +99,8 @@ socket.on('m3_r', function(){
 	if (duty3 < 156) {
 		var m3 = duty3++;
 		var m3 = duty3++;
+		var m3 = duty3++;
+		var m3 = duty3++;
 		var m3 = duty3*10000;
 		console.log(m3);
 		fs.writeFileSync("/sys/class/pwm/pwm-0:0/duty_cycle", m3);
@@ -98,6 +110,8 @@ socket.on('m3_r', function(){
 //motor P8.19 left
 socket.on('m4_l', function(){
 	if (duty4 < 220) {
+		var m4 = duty4++;
+		var m4 = duty4++;
 		var m4 = duty4++;
 		var m4 = duty4++;
 		var m4 = duty4*10000;
@@ -111,6 +125,8 @@ socket.on('m4_r', function(){
 	if (duty4 > 52) {
 		var m4 = duty4--;
 		var m4 = duty4--;
+		var m4 = duty4--;
+		var m4 = duty4--;
 		var m4 = duty4*10000;
 		console.log(m4);
 		fs.writeFileSync("/sys/class/pwm/pwm-6:0/duty_cycle", m4);
@@ -122,6 +138,10 @@ socket.on('m5_l', function(){
 	if (duty5 > 94) {
 		var m5 = duty5--;
 		var m5 = duty5--;
+		var m5 = duty5--;
+		var m5 = duty5--;
+		var m5 = duty5--;
+		var m5 = duty5--;
 		var m5 = duty5*10000;
 		console.log(m5);
 		fs.writeFileSync("/sys/class/pwm/pwm-3:1/duty_cycle", m5);
@@ -131,6 +151,10 @@ socket.on('m5_l', function(){
 //motor P9.16  right
 socket.on('m5_r', function(){
 	if (duty5 < 150) {
+		var m5 = duty5++;
+		var m5 = duty5++;
+		var m5 = duty5++;
+		var m5 = duty5++;
 		var m5 = duty5++;
 		var m5 = duty5++;
 		var m5 = duty5*10000;
